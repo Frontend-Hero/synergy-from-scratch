@@ -11,6 +11,6 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: ftp.frontendhero.dev
+        server: grh44.myukcloud.com
         username: ${{ secrets.FEHFTPUSER }}
         password: ${{ secrets.FEHFTPPASSWORD }}
