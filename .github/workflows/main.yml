@@ -15,4 +15,4 @@ jobs:
         username: ${{ secrets.FEHFTPUSER }}
         password: ${{ secrets.FEHFTPPASSWORD }}
         protocol: ftps
-        server-dir: public_html/
+        server-dir: public_html/synergy-from-scratch/
