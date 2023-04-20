@@ -87,18 +87,18 @@ table {
 ******************************************************************/
 
 :root {
-	--primary-color: #062265;
-	--secondary-color: #007bff;
+    --primary-color: #062265;
+    --secondary-color: #007bff;
 	
-	--light-grey: #a0a0a0;
-	--lighter-grey: #f1f1f1;
-	--dark-grey: #666;
+    --light-grey: #a0a0a0;
+    --lighter-grey: #f1f1f1;
+    --dark-grey: #666;
 	
-	--grey-border: #ccc;
+    --grey-border: #ccc;
+
+    --light-blue: #ecf2fa;
 	
-	--light-blue: #ecf2fa;
-	
-	--border-radius: 5px;
+    --border-radius: 5px;
 }
 .lighter-grey { color: var(--lighter-grey); }
 .light-grey { color: var(--light-grey); }
