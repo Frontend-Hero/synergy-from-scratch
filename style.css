@@ -690,7 +690,7 @@ table {
                     font-size: 1.7rem;
                 }
                 #primary-nav > ul > li > a:hover,
-                #primary-nav > ul > li.current-menu-item > a {
+                body.desktop #primary-nav > ul > li.current-menu-item > a {
                     background: var(--lighter-grey);
                 }
 
@@ -706,38 +706,48 @@ table {
             /** 
             * Top level link with sub menus 
             */
-            #primary-nav > ul > li.menu-item-has-children > a::after {
-                font-family: FontAwesome;
-                content: "\f107";
+            .dd-arrow {
                 position: absolute;
-                width: 17px;
-                height: 17px;
-                text-align: center;
-                font-size: 1.5rem;
-                line-height: 1.8rem;
-                right: 1.2rem;
                 top: 50%;
                 transform: translateY(-50%);
                 border-radius: var(--bor-rad);
-                transform-origin: center center;
-                transition: all 0.3s ease;
+                right: 1.2rem;
+                width: 17px;
+                height: 17px;
+                z-index: 1;
+                cursor: pointer;
             }
-            #primary-nav > ul > li.menu-item-has-children:hover > a:after {
+            .dd-arrow::after {
+               font-family: FontAwesome;
+                content: "\f107";
+                position: absolute;
+                transform: translate(-50%, -50%);
+                width: 17px;
+                height: 17px;
+                transition: all 0.3s ease;
+                transform-origin: center center;
+                text-align: center;
+                left: 50%;
+                top: 50%;
+                line-height: 1.6rem;
+                border-radius: var(--bor-rad);
+            }
+            body.desktop-view li.menu-item-has-children:hover .dd-arrow::after {
                 background: #ffffff45;
                 color: #fff;
-                transform: translateY(-50%) rotate(180deg);
+                transform: translate(-50%, -50%) rotate(180deg);
             }
 
 
             /** 
-            * If current item has children, don't make ad 
+            * If current item has children, tweak border radius + padding
             */
             #primary-nav > ul > li.menu-item-has-children > a, 
             #primary-nav > ul > li.current-menu-item.menu-item-has-children:hover > a { 
                 border-radius: var(--bor-rad) var(--bor-rad) 0 0;
                 padding-right: 4rem;
             }
-            #primary-nav > ul > li.menu-item-has-children:hover > a {
+            body.desktop-view #primary-nav > ul > li.menu-item-has-children:hover > a {
                 background: var(--secondary-color);
                 color: #fff;
             }
@@ -768,18 +778,14 @@ table {
 
 
             /** 
-            * Display sub menu with hover
+            * Display sub menu with on desktop etc
             */
-            @media (hover: hover) {
-                * {
-                    border: 2px solid red !important;
-                }
-                #primary-nav li:hover ul.sub-menu {
-                    opacity: 1;
-                    visibility: visible;
-                    margin-top: 0;
-                }
+            body.desktop-view #primary-nav li:hover ul.sub-menu {
+                opacity: 1;
+                visibility: visible;
+                margin-top: 0;
             }
+
                 #primary-nav ul.sub-menu li {
                     margin: 0;
                     font-size: 1.6rem;
@@ -905,11 +911,11 @@ table {
         #primary-nav {
             opacity: 0; 
             visibility: hidden;
-            position: fixed;
+            position: absolute;
             width: 100%; 
             height: 100vh;
             left: 0;
-            top: 134px;
+            top: 61px;
             background: #fff;
             z-index: 1;
         }
@@ -920,6 +926,20 @@ table {
                 #primary-nav ul {
                     display: block;
                 }
+
+                #primary-nav li.menu-item-has-children {
+                    background: var(--lighter-grey);
+                }
+
+                #primary-nav li.menu-item-has-children.active ul.sub-menu {
+                    opacity: 1;
+                    visibility: visible;
+                    position: relative;
+                }
+                #primary-nav li.menu-item-has-children.active .dd-arrow::after {
+                    transform: translate(-50%, -50%) rotate(180deg);
+                }
+
                     #primary-nav li {
                         margin: 0px !important;
                         width: 100%;
@@ -927,16 +947,36 @@ table {
                     }
                     #primary-nav a {
                         border-radius: 0 !important;
+                        color: var(--body-text) !important;
                     }
+
+                        .dd-arrow {
+                            background: #fff;
+                            border-radius: 0;
+                            border-left: 1px solid var(--light-grey);
+                            right: 0;
+                            width: 4.5rem;
+                            top: 0;
+                            transform: none;
+                        }
+
                         #primary-nav ul.sub-menu {
                             width: 100%;
+                            border-radius: 0;
+                            background: var(--lighter-grey);
                         }
-                        @media (hover: hover) {
-                            #primary-nav li:hover ul.sub-menu {
-                                position: relative;
-                                border-radius: 0 !important;
-                            }
+                        #primary-nav ul.sub-menu li {
+                            border-top: 1px solid var(--light-grey);
                         }
+                        #primary-nav ul.sub-menu a {
+                            padding-left: 3rem;
+                        }
+                        
+                        /* body.desktop-view #primary-nav li:hover ul.sub-menu {
+                            position: relative;
+                            border-radius: 0 !important;
+                        } */
+                        
                 
         .hamburger {
             display: block;
@@ -970,7 +1010,7 @@ table {
             width: calc(100% - 27px);
         }
         #primary-nav {
-            top: 126px;
+            top: 53px;
         }
         
     }
