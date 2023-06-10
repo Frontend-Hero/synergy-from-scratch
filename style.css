@@ -968,14 +968,19 @@ table {
                         #primary-nav ul.sub-menu li {
                             border-top: 1px solid var(--light-grey);
                         }
+                        #primary-nav ul.sub-menu a::before {
+                            content: "";
+                            background: var(--body-text);
+                            position: absolute;
+                            width: 8px;
+                            height: 2px;
+                            transform: translateY(-50%);
+                            top: 50%;
+                            left: 1.3rem;
+                        }
                         #primary-nav ul.sub-menu a {
                             padding-left: 3rem;
                         }
-                        
-                        /* body.desktop-view #primary-nav li:hover ul.sub-menu {
-                            position: relative;
-                            border-radius: 0 !important;
-                        } */
                         
                 
         .hamburger {
