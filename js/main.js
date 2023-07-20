@@ -70,8 +70,7 @@ function triggerSearchForm()
 		,250);
 		
         let screenWidth;
-        jQuery( window ).resize(function() 
-        {	
+        jQuery(window).on('load resize', function() {
             screenWidth = jQuery(window).width();
 
             if(screenWidth <= 500 && searchFormWrapper.classList.contains('active')) {
@@ -106,10 +105,9 @@ triggerSearchForm();
 * Close search form and restore nav
 *************************************************************************/
 
-function removeSearchFormRestoreNav() 
-{
-	jQuery('#primary-nav').removeClass('inactive');
-	jQuery('#search-form-wrapper').removeClass('active');
+function removeSearchFormRestoreNav() {
+	document.getElementById('primary-nav').classList.remove('inactive');
+    document.getElementById('search-form-wrapper').classList.remove('active');
 }
 
 
@@ -148,16 +146,15 @@ function toggleMobileSubMenus()
             const ul = this.parentElement.nextElementSibling;
             const liHasChildren = this.parentElement.parentElement;
 
-            if (!liHasChildren.classList.contains('active')) { 
+            if (liHasChildren.classList.contains('active')) { 
 
                 /* menuItemHasChildrenAll.forEach(function(menuItemHasChildren) {
                     menuItemHasChildren.classList.remove('active');
                 }); */
-                
-                this.parentNode.parentNode.classList.add('active');
-            } 
-            else if (liHasChildren.classList.contains('active')) { 
                 this.parentNode.parentNode.classList.remove('active');
+            } 
+            else if (!liHasChildren.classList.contains('active')) { 
+                this.parentNode.parentNode.classList.add('active');
             }
         });
     });
