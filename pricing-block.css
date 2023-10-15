@@ -1,1 +1,125 @@
+/*******************************************************
+* 13. Block / Pricing 
+*******************************************************/
+
+#pricing {
+}
+    .pricing-table {
+        border-top: 1px solid var(--secondary-color);
+        border-bottom: 1px solid var(--secondary-color);
+        border-left: 1px solid var(--secondary-color);
+        background-color: #fff;
+        padding: 2.5rem 2.5rem 10rem 2.5rem;
+        position: relative;
+    }
+    .pricing-table:last-child {
+        border-right: 1px solid var(--secondary-color);
+    }
+
+    .pricing-table * {
+        text-align: center;
+    }
+    .pricing-table h2 {
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+    }
+
+        ul.pricing-features {
+        }
+            ul.pricing-features li {
+                padding: 1rem 0;
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+            }
+                ul.pricing-features li svg {
+                    width: 2rem;
+                    height: 2rem;
+                    margin-right: 1rem;
+                    fill: var(--secondary-color);
+                }
+                ul.pricing-features li.no-feature svg {
+                    fill: var(--body-text);
+                }
+
+    .pricing-table a.btn {
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        bottom: 3rem;
+    }
+
+
+
+
+
+
+
+
+
+    @media only screen and (max-width: 850px) {
+
+        .pricing-table {
+            grid-column: span 12;
+            padding: 0;
+            border: 1px solid var(--primary-color);
+        }
+            .pricing-table h2,
+            .pricing-table h4,
+            .pricing-table span {
+                text-align: left;
+                margin: 0;
+            }
+            .pricing-table hgroup {
+                background-color: var(--primary-color);
+                padding: 1.5rem;
+            }
+                .pricing-table h4 {
+                    color: #fff;
+                }
+            ul.pricing-features {
+                display: grid;
+                grid-template-columns: repeat(8,150px);
+                overflow: auto;
+            }
+                ul.pricing-features li {
+                    border-right: 1px solid var(--primary-color);
+                    padding: 1.5rem;
+                    flex-direction: column;
+                    align-items: normal;
+                }
+                ul.pricing-features li:last-child {
+                    border-right: 0px none;
+                }
+                ul.pricing-features li svg {
+                    margin-bottom: 1rem;
+                    display: block;
+                }
+                ul.pricing-features span {
+                    line-height: 2.2rem;
+                }
+            .pricing-table a.btn {
+                top: 11%;
+                left: auto;
+                bottom: auto;
+                right: 20px;
+                transform: none;
+                text-indent: -99999px;
+                padding: 0;
+                width: 5rem;
+                height: 5rem;
+                display: flex;
+                align-items: center;
+            }
+            .pricing-table a.btn::after {
+                text-indent: 0;
+                right: 0;
+                width: 100%;
+                text-align: center;
+            }
+
+    }
+
+          
 
