@@ -1,0 +1,267 @@
+<style>
+/*******************************************************
+* 14. Block / Our Team
+*******************************************************/
+
+#team-members {
+    
+}
+    .team-member {
+        position: relative;
+        overflow: hidden;
+        height: 420px;
+        background: #fff;
+    }
+        .team-member img {
+            transition: all 0.3s ease;
+            filter: grayscale(1);
+            display: block;
+        }
+        .team-member:hover img {
+            transform: scale(1.1);
+            filter: grayscale(0);
+        }
+
+        .team-member .content-area {
+            position: absolute;
+            text-align: center;
+            bottom: 0;
+            width: 100%;
+            background: #fff;
+            padding: 2.4rem 2rem 2.2rem 2rem;
+            transition: all 0.2s ease-in-out;
+        }
+        .team-member:hover .content-area {
+            bottom: 3rem;
+        }
+            .team-member .content-area a {
+                text-decoration: none;
+                color: var(--secondary-color);
+            }
+                .team-member .content-area h5 {
+                    margin-bottom: 0.5rem;
+                }
+                .team-member .content-area p {
+                    margin-bottom: 0;
+                }
+                .team-member ul.social-media {
+                    justify-content: center;
+                    display: flex;
+                    opacity: 1;
+                    position: absolute;
+                    width: calc(100% - 4rem);
+                    bottom: -10px;
+                    transition: all 0.3s ease-in-out;
+                    opacity: 0;
+                    font-size: 1.7rem;
+                }
+                    .team-member:hover ul.social-media {
+                        opacity: 0.8;
+                    }
+                    .team-member ul.social-media li {
+                        margin: 0 0.5rem;
+                    }
+                    
+                
+    @media only screen and (max-width: 1200px) {
+
+        .team-member {
+            height: auto;
+        }
+            .team-member:hover img {
+                transform: none;
+                filter: grayscale(1);
+            }
+            .team-member .content-area {
+                position: relative;
+                text-align: center;
+                bottom: 0 !important;
+            }
+                .team-member ul.social-media {
+                    position: relative;
+                    width: 100%;
+                    bottom: auto;
+                    opacity: 1;
+                    margin-top: 1.4rem;
+                }
+
+    }
+
+    @media only screen and (max-width: 850px) {
+
+        .team-member {
+            grid-column: span 6;
+        }
+
+    }
+
+    @media only screen and (max-width: 500px) {
+
+        .team-member {
+            grid-column: span 12;
+        }
+            /* .team-member h5 {
+                font-size: 2.2rem;
+                line-height: 2.4rem;
+            }
+            .team-member p {
+                font-size: 1.8rem;
+                line-height: 2.6rem;
+            }
+            .team-member ul.social-media {
+                font-size: 2.4rem;
+            } */
+
+    }
+
+  </style>
+
+
+
+  <section id="team-members" class="primary-light-bg">
+        <div class="wrapper">
+            <h2 class="text-align-center">Our Team</h2>
+            <div class="team-members-list grid-row gap">
+                <div class="team-member span-3">
+                    <a href="https://www.linkedin.com/">
+                        <img src="https://www.frontendhero.dev/staging/wtfs/wp-content/uploads/2022/01/profile-garth.jpg" alt="Profile photo of Garth">
+                    </a>
+                    <div class="content-area">
+                        <a href="">
+                            <h5>Garth Marenghi</h5>
+                            <p class="small-text">CEO</p>
+                        </a>
+                        <ul class="social-media">
+                            <li>
+                                <a target="_blank" href="https://www.linkedin.com/">
+                                    <span class="ti-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://twitter.com/">
+                                    <i class="ti-twitter"></i>
+                                </a>
+                            </li>    
+                            <li>
+                                <a target="_blank" href="https://www.instagram.com">
+                                    <i class="ti-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.facebook.com">
+                                    <i class="ti-facebook"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- / Team member-->
+
+                <div class="team-member span-3">
+                    <a href="https://www.linkedin.com/">
+                        <img src="https://www.frontendhero.dev/staging/wtfs/wp-content/uploads/2022/01/profile-garth.jpg" alt="Profile photo of Garth">
+                    </a>
+                    <div class="content-area">
+                        <a href="">
+                            <h5>Garth Marenghi</h5>
+                            <p class="small-text">CEO</p>
+                        </a>
+                        <ul class="social-media">
+                            <li>
+                                <a target="_blank" href="https://www.linkedin.com/">
+                                    <span class="ti-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://twitter.com/">
+                                    <i class="ti-twitter"></i>
+                                </a>
+                            </li>    
+                            <li>
+                                <a target="_blank" href="https://www.instagram.com">
+                                    <i class="ti-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.facebook.com">
+                                    <i class="ti-facebook"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- / Team member-->
+
+                <div class="team-member span-3">
+                    <a href="https://www.linkedin.com/">
+                        <img src="https://www.frontendhero.dev/staging/wtfs/wp-content/uploads/2022/01/profile-garth.jpg" alt="Profile photo of Garth">
+                    </a>
+                    <div class="content-area">
+                        <a href="">
+                            <h5>Garth Marenghi</h5>
+                            <p class="small-text">CEO</p>
+                        </a>
+                        <ul class="social-media">
+                            <li>
+                                <a target="_blank" href="https://www.linkedin.com/">
+                                    <span class="ti-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://twitter.com/">
+                                    <i class="ti-twitter"></i>
+                                </a>
+                            </li>    
+                            <li>
+                                <a target="_blank" href="https://www.instagram.com">
+                                    <i class="ti-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.facebook.com">
+                                    <i class="ti-facebook"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- / Team member-->
+
+                <div class="team-member span-3">
+                    <a href="https://www.linkedin.com/">
+                        <img src="https://www.frontendhero.dev/staging/wtfs/wp-content/uploads/2022/01/profile-garth.jpg" alt="Profile photo of Garth">
+                    </a>
+                    <div class="content-area">
+                        <a href="">
+                            <h5>Garth Marenghi</h5>
+                            <p class="small-text">CEO</p>
+                        </a>
+                        <ul class="social-media">
+                            <li>
+                                <a target="_blank" href="https://www.linkedin.com/">
+                                    <span class="ti-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://twitter.com/">
+                                    <i class="ti-twitter"></i>
+                                </a>
+                            </li>    
+                            <li>
+                                <a target="_blank" href="https://www.instagram.com">
+                                    <i class="ti-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://www.facebook.com">
+                                    <i class="ti-facebook"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- / Team member-->
+            </div>
+            </div>
+        </div>
+    </section>
