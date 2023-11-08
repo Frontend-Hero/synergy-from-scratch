@@ -1,4 +1,118 @@
 <style>
+
+ #testimonials-area {
+        background: var(--primary-color);
+        padding: 70px 50px 70px 90px;
+        transition: all 0.3s ease;
+    }
+        #testimonials-area * {
+            color: #fff;
+        }
+
+        #testimonial-thumbnails-wrapper {
+            height: 100%;
+            position: relative;
+        }
+            #testimonial-thumbnails-navigation {
+                position: absolute;
+                right: -70px;
+                width: 225px;
+                height: 225px;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 1;
+            }
+
+            #testimonial-thumbnails-navigation span {
+                background: var(--light-grey);
+                display: block;
+                right: 0;
+                bottom: 0;
+                position: absolute;
+                width: 35px;
+                height: 35px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                z-index: 1;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.3rem;
+            }
+            #testimonial-thumbnails-navigation span:hover {
+                background: var(--grey);
+                color: #fff;
+
+            }
+            #testimonial-thumbnails-navigation span.prev {
+                right: 36px;
+            }
+
+            figcaption p {
+                margin: 0;
+                font-weight: bold;
+            }
+            figcaption p.job-role {
+                font-weight: normal;
+                opacity: 0.6;
+            }
+
+            #testimonials blockquote {
+                position: relative;
+                padding-left: 30px;
+            }
+            #testimonials blockquote:before {
+                content: "\e67f";
+                color: var(--secondary-color);
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                left: 0px;
+                font-family: 'themify';
+            }
+
+            figcaption {
+                margin-left: 30px;
+            }
+
+
+            @media only screen and (max-width: 850px) {
+
+                #testimonials .span-4 {
+                    display: none;
+                }
+                #testimonials-area {
+                    grid-column: span 12;
+                    padding: 25px 25px 25px 20px;
+                }
+
+
+            }
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   
 .slick-slider
 {
